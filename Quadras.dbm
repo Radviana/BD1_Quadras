@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+ Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.4" use-changelog="false" last-position="0,0" last-zoom="0.55" max-obj-count="12"
+	 default-schema="public" default-owner="postgres"
+	 layers="Default layer"
+	 active-layers="0"
+	 layer-name-colors="#000000"
+	 layer-rect-colors="#b4b4b4"
+	 show-layer-names="false" show-layer-rects="false">
+<database name="Quadras" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" layers="0" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="Quadra" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="540" y="60"/>
+	<column name="ID_Quadra" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Desc_Quadra">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Comprimento" not-null="true">
+		<type name="numeric" length="4" precision="2"/>
+	</column>
+	<column name="Largura" not-null="true">
+		<type name="numeric" length="4" precision="2"/>
+	</column>
+	<constraint name="Quadra_pk" type="pk-constr" table="public.&quot;Quadra&quot;">
+		<columns names="ID_Quadra" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Tipo_Quadra" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="20" y="80"/>
+	<column name="ID_Tipo" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Desc_Tipo_Quadra">
+		<type name="varchar" length="100"/>
+	</column>
+	<constraint name="Tipo_Quadra_pk" type="pk-constr" table="public.&quot;Tipo_Quadra&quot;">
+		<columns names="ID_Tipo" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Professor" layers="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="20" y="520"/>
+	<column name="Matricula_Prof" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Nome_Prof" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Salário_Prof" not-null="true">
+		<type name="decimal" length="6" precision="2"/>
+	</column>
+	<constraint name="Professor_pk" type="pk-constr" table="public.&quot;Professor&quot;">
+		<columns names="Matricula_Prof" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Esporte" layers="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="20" y="280"/>
+	<column name="ID_Esporte" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Desc_Esporte" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Modalidade" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Equipes" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="Esporte_pk" type="pk-constr" table="public.&quot;Esporte&quot;">
+		<columns names="ID_Esporte" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Aluno" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="40" y="880"/>
+	<column name="Matricula_Aluno" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Nome_Aluno" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Mensalidade" not-null="true">
+		<type name="decimal" length="6" precision="2"/>
+	</column>
+	<column name="data_pagamento" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="Pagamento">
+		<type name="varchar" length="4"/>
+	</column>
+	<constraint name="Aluno_pk" type="pk-constr" table="public.&quot;Aluno&quot;">
+		<columns names="Matricula_Aluno" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Aluguel" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1060" y="40"/>
+	<column name="ID_Aluguel" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Data_Locação" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="Valor" not-null="true">
+		<type name="decimal" length="6" precision="2"/>
+	</column>
+	<column name="Tempo" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Data_Devolução" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<constraint name="Aluguel_pk" type="pk-constr" table="public.&quot;Aluguel&quot;">
+		<columns names="ID_Aluguel,Data_Locação" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="ID_Quadra_Quadra" index="5"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="Quadra_fk" index="1"/>
+	</customidxs>
+</table>
+
+<table name="Turma" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="560" y="400"/>
+	<column name="ID_Turma" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="Turma_pk" type="pk-constr" table="public.&quot;Turma&quot;">
+		<columns names="ID_Turma" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="Quadra_has_many_Turma" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#45bd3a"
+	 src-table="public.&quot;Quadra&quot;"
+	 dst-table="public.&quot;Turma&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Professor_has_many_Turma" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#6660e7"
+	 src-table="public.&quot;Professor&quot;"
+	 dst-table="public.&quot;Turma&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Esporte_has_many_Turma" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#4fa740"
+	 src-table="public.&quot;Esporte&quot;"
+	 dst-table="public.&quot;Turma&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Quadra_has_many_Aluguel" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#6a6eae"
+	 src-table="public.&quot;Quadra&quot;"
+	 dst-table="public.&quot;Aluguel&quot;"
+	 src-required="false" dst-required="false"/>
+
+<table name="Colaborador" layers="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="500" y="760"/>
+	<column name="Matrícula_Colaborador" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Nome_Colaborador" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Salário_Colaborador" not-null="true">
+		<type name="decimal" length="6" precision="2"/>
+	</column>
+	<constraint name="Colaborador_pk" type="pk-constr" table="public.&quot;Colaborador&quot;">
+		<columns names="Matrícula_Colaborador" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="Tipo_Quadra_has_many_Quadra" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#a014c4"
+	 src-table="public.&quot;Tipo_Quadra&quot;"
+	 dst-table="public.&quot;Quadra&quot;"
+	 src-required="false" dst-required="false"/>
+
+<table name="Serviço" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="980" y="480"/>
+	<column name="ID_Serviço" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="Desc_Serviço">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="Data_Serviço">
+		<type name="date" length="0"/>
+	</column>
+	<column name="Duração_Serviço">
+		<type name="time" length="0"/>
+	</column>
+	<constraint name="Serviço_pk" type="pk-constr" table="public.&quot;Serviço&quot;">
+		<columns names="ID_Serviço" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="Nota_Fiscal" layers="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1420" y="320"/>
+	<column name="ID_Nota_Fiscal" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="Nota_Fiscal_pk" type="pk-constr" table="public.&quot;Nota_Fiscal&quot;">
+		<columns names="ID_Nota_Fiscal" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="Nota_Fiscal_has_one_Aluguel" type="rel11" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#256995"
+	 src-table="public.&quot;Aluguel&quot;"
+	 dst-table="public.&quot;Nota_Fiscal&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Aluno_has_many_Nota_Fiscal" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#c54bc0"
+	 src-table="public.&quot;Aluno&quot;"
+	 dst-table="public.&quot;Nota_Fiscal&quot;"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="1440" y="980"/>
+	</line>
+</relationship>
+
+<relationship name="Colaborador_has_many_Serviço" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#f7b5e8"
+	 src-table="public.&quot;Colaborador&quot;"
+	 dst-table="public.&quot;Serviço&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Aluno_has_many_Turma" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b3f591"
+	 src-table="public.&quot;Aluno&quot;"
+	 dst-table="public.&quot;Turma&quot;"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="Quadra_has_many_Serviço" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#891815"
+	 src-table="public.&quot;Quadra&quot;"
+	 dst-table="public.&quot;Serviço&quot;"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
