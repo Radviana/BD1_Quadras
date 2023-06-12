@@ -29,3 +29,11 @@ SELECT s.ID_Serviço, s.Desc_Serviço, s.Data_Serviço, s.Duração_Serviço, c.
 FROM Serviço s
 LEFT JOIN Colaborador c ON s.Matrícula_Colaborador_Colaborador = c.Matrícula_Colaborador
 LEFT JOIN Quadra q ON s.ID_Quadra_Quadra = q.ID_Quadra;
+
+
+-- View com informações da nota fiscal
+
+CREATE OR REPLACE VIEW view_nota_fiscal AS
+SELECT nf.id_nota_fiscal, nf.id_aluguel_aluguel, nf.data_locação_aluguel, a.*
+FROM Nota_fiscal nf
+INNER JOIN Aluno a on nf.matricula_aluno_aluno = a.matricula_aluno;
