@@ -1,4 +1,0 @@
-SELECT 
-    FLOOR(DATEDIFF(day, CURRENT_DATE, data_nascimento) / 365.25) AS idade
-FROM
-    tabela_pessoas;
