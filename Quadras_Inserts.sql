@@ -43,6 +43,31 @@ INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pag
 INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
 INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
 INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (1, 'José', 800.32, '2023-05-12', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (2, 'Pedro', 300.56, '2023-04-02', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (1, 'José', 800.32, '2023-05-12', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (2, 'Pedro', 300.56, '2023-04-02', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (1, 'José', 800.32, '2023-05-12', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (2, 'Pedro', 300.56, '2023-04-02', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (1, 'José', 800.32, '2023-05-12', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (2, 'Pedro', 300.56, '2023-04-02', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (1, 'José', 800.32, '2023-05-12', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (2, 'Pedro', 300.56, '2023-04-02', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (3, 'Maria', 568.99, '2023-05-15', NULL);
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (4, 'Jacira', 600.75, '2023-04-23', 'Pago');
+INSERT INTO Aluno (Matricula_Aluno, Nome_Aluno, Mensalidade, Data_pagamento, Pagamento) VALUES (5, 'Jack', 1059.51, '2023-05-02', NULL);
 
 /*Aluguel	ID_Aluguel integer NOT NULL,
 			Data_Locação timestamp NOT NULL,
