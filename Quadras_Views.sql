@@ -1,9 +1,16 @@
 -- View com informações dos alunos que pagaram a mensalidade:
 
-CREATE OR REPLACE VIEW view_alunos_pagantes AS
-SELECT a.Matricula_Aluno, a.Nome_Aluno, a.Mensalidade, a.data_pagamento
+CREATE OR REPLACE VIEW view_alunos_quitados AS
+SELECT a.Matricula_Aluno, a.Nome_Aluno, a.Mensalidade, a.Pagamento
 FROM Aluno a
 WHERE a.Pagamento = 'Pago';
+
+-- View com informações dos alunos que inadimplentes:
+
+CREATE OR REPLACE VIEW view_alunos_inadimplentes AS
+SELECT a.Matricula_Aluno, a.Nome_Aluno, a.Mensalidade, a.Pagamento
+FROM Aluno a
+WHERE a.Pagamento = 'Não Pago';
 
 -- View com informações dos aluguéis de quadras e seus respectivos alunos:
 

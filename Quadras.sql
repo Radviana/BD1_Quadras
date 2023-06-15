@@ -70,7 +70,7 @@ CREATE TABLE public.Aluno (
 	Nome_Aluno varchar(100) NOT NULL,
 	Mensalidade decimal(6,2) NOT NULL,
 	data_pagamento date NOT NULL,
-	Pagamento varchar(4),
+	Pagamento varchar(8),
 	CONSTRAINT Aluno_pk PRIMARY KEY (Matricula_Aluno)
 );
 -- ddl-end --
